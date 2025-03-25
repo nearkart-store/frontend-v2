@@ -26,37 +26,47 @@ export function SearchForm({ minimal = false }: SearchFormProps) {
   if (minimal) {
     return (
       <form onSubmit={handleSubmit} className="relative w-full max-w-sm">
-        <Input
-          type="search"
-          placeholder="Search products..."
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          className="pr-10"
-        />
-        <Button type="submit" size="icon" variant="ghost" className="absolute right-0 top-0 h-full">
-          <Search className="h-4 w-4" />
-          <span className="sr-only">Search</span>
-        </Button>
+        <div className="relative">
+          <Input
+            type="search"
+            placeholder="Search products..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            className="w-full h-11 pl-5 pr-12 bg-white backdrop-blur-lg rounded-full shadow-lg text-base focus:outline-none"
+          />
+          <Button
+            type="submit"
+            size="icon"
+            variant="ghost"
+            className="absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 bg-primary text-white rounded-full hover:bg-primary/90 transition"
+          >
+            <Search className="h-5 w-5" />
+          </Button>
+        </div>
       </form>
+
     )
   }
 
   return (
     <form onSubmit={handleSubmit} className="relative w-full max-w-2xl mx-auto">
-      <div className="flex">
+      <div className="flex bg-white backdrop-blur-lg rounded-full shadow-lg overflow-hidden">
         <Input
           type="search"
           placeholder="Search for products, brands, and more..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="rounded-r-none h-12 text-base"
+          className="h-12 text-base px-5 bg-transparent border-none focus:outline-none"
         />
-        <Button type="submit" className="rounded-l-none h-12 px-6">
-          <Search className="h-5 w-5 mr-2" />
-          Search
+        <Button
+          type="submit"
+          className="h-12 px-6 bg-primary text-white hover:bg-primary/90 transition"
+        >
+          <Search className="h-5 w-5" />
         </Button>
       </div>
     </form>
+
   )
 }
 
