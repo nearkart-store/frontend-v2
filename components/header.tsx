@@ -33,7 +33,7 @@ export function Header() {
               <Link
                 key={category.name}
                 href={category.href}
-                className="text-gray-700 hover:text-primary dark:hover:text-blue-400 font-medium"
+                className="text-gray-700 hover:text-primary dark:hover:text-primary font-medium"
               >
                 {category.name}
               </Link>
@@ -71,7 +71,7 @@ export function Header() {
                 <Link
                   key={category.name}
                   href={category.href}
-                  className="block py-2 text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
+                  className="block py-2 hover:text-primary dark:hover:text-primary"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {category.name}
