@@ -12,7 +12,7 @@ import {
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "NearKart - Price Comparison",
+  title: "NearKart - Find the best deals across multiple e-commerce platforms",
   description: "Find the best deals across multiple e-commerce platforms",
   keywords: ["e-commerce", "shopping", "deals", "price comparison"],  
   viewport: "width=device-width, initial-scale=1",
