@@ -24,7 +24,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold ">Nearkart</span>
+            <span className="text-2xl font-bold ">NearKart</span>
           </Link>
 
           {/* Desktop Navigation */}
