@@ -64,7 +64,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t">
+          <div className="md:hidden py-4">
             <SearchForm minimal />
             <nav className="mt-4 space-y-2">
               {categories.map((category) => (
