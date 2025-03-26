@@ -30,7 +30,7 @@ export function Newsletter() {
   }
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-900">
+    <section className="py-16 bg-gray-50 dark:bg-zinc-900">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold t mb-4">Stay Updated with the Best Deals</h2>
@@ -45,7 +45,7 @@ export function Newsletter() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="h-12 bg-white dark:bg-gray-950"
+              className="h-12 bg-white dark:bg-zinc-950"
             />
             <Button
               type="submit"

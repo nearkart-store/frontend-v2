@@ -20,7 +20,7 @@ export default async function ProductPage({ params }: { params: { id: string } }
     <main className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
         {/* Product Images */}
-        <div className="bg-white rounded-lg p-4 shadow-sm">
+        <div className=" rounded-lg p-4 shadow-sm">
           <div className="relative aspect-square mb-4 overflow-hidden rounded-md">
             <Image
               src={product.image || "/placeholder.svg"}
@@ -70,7 +70,7 @@ export default async function ProductPage({ params }: { params: { id: string } }
 
           <div className="mb-6">
             <h2 className="text-xl font-semibold mb-2">Description</h2>
-            <p className="text-gray-700">{product.description}</p>
+            <p className="text-gray-700 dark:text-gray-400">{product.description}</p>
           </div>
 
           <PriceComparison prices={product.prices} />
@@ -90,10 +90,10 @@ export default async function ProductPage({ params }: { params: { id: string } }
           <ProductReviews reviews={product.reviews || []} />
         </TabsContent>
         <TabsContent value="comparison">
-          <div className="bg-white p-6 rounded-lg shadow-sm">
+          <div className="bg-white dark:bg-background p-6 rounded-lg shadow-sm">
             <h3 className="text-lg font-semibold mb-4">Price History</h3>
             {/* Price history chart would go here */}
-            <div className="h-64 bg-gray-100 rounded flex items-center justify-center">
+            <div className="h-64 bg-gray-100 dark:bg-background rounded flex items-center justify-center">
               Price history chart placeholder
             </div>
           </div>

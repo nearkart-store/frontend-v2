@@ -44,7 +44,7 @@ export function FeaturedProducts() {
   ]
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-900">
+    <section className="py-16 bg-gray-50 dark:bg-zinc-900">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-3xl font-bold">Featured Products</h2>
@@ -60,7 +60,7 @@ export function FeaturedProducts() {
             <Link
               key={product.id}
               href={`/products/${product.id}`}
-              className="group bg-white dark:bg-gray-950 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow"
+              className="group bg-white dark:bg-zinc-950 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow"
             >
               <div className="relative aspect-square bg-gray-100 dark:bg-gray-900">
                 <Image
