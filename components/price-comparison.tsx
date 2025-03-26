@@ -20,16 +20,15 @@ export function PriceComparison({ prices }: PriceComparisonProps) {
   const displayPrices = showAll ? sortedPrices : sortedPrices.slice(0, 3)
 
   return (
-    <div className="bg-white dark:bg-gray-950 rounded-lg shadow-sm p-4 border">
+    <div className="bg-white dark:bg-zinc-950 rounded-lg shadow-sm p-4 border">
       <h3 className="text-lg font-semibold mb-4">Compare Prices</h3>
 
       <div className="space-y-4">
         {displayPrices.map((price, index) => (
           <div
             key={`${price.platform}-${index}`}
-            className={`flex items-center justify-between p-3 rounded-lg ${
-              index === 0 ? "bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-900" : ""
-            }`}
+            className={`flex items-center justify-between p-3 rounded-lg ${index === 0 ? "bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-900" : ""
+              }`}
           >
             <div className="flex items-center space-x-3">
               <div className="relative w-8 h-8">

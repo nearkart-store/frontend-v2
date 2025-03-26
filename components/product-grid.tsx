@@ -22,7 +22,7 @@ export function ProductGrid({ products }: ProductGridProps) {
         <Link
           key={product.id}
           href={`/products/${product.id}`}
-          className="group bg-white dark:bg-gray-950 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow"
+          className="group bg-white dark:bg-zinc-950 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow"
         >
           <div className="relative aspect-square bg-gray-100 dark:bg-gray-900">
             <Image

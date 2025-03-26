@@ -43,7 +43,7 @@ export function Header() {
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
             <SearchForm minimal />
-            {/* <ModeToggle /> */}
+            <ModeToggle />
             {/* <Button variant="ghost" size="icon">
               <Heart className="h-5 w-5" />
             </Button> */}
@@ -56,7 +56,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center space-x-2">
             <UserLogin />
-            <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <Button className="bg-transparent hover:bg-transparent" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
           </div>
@@ -79,14 +79,12 @@ export function Header() {
               ))}
             </nav>
             <div className="mt-4 flex space-x-4">
-              {/* <Button variant="ghost" size="sm" className="flex-1">
-                <Heart className="h-5 w-5 mr-2" />
-                Wishlist
-              </Button>
-              <Button variant="ghost" size="sm" className="flex-1">
-                <User className="h-5 w-5 mr-2" />
-                Account
-              </Button> */}
+              <div className="flex-1">
+                <ModeToggle />
+               
+              </div>
+              
+              
             </div>
           </div>
         )}

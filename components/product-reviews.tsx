@@ -27,7 +27,7 @@ export function ProductReviews({ reviews }: ProductReviewsProps) {
   })
 
   return (
-    <div className="bg-white dark:bg-gray-950 p-6 rounded-lg shadow-sm">
+    <div className="bg-white dark:bg-background p-6 rounded-lg shadow-sm">
       <h3 className="text-lg font-semibold mb-6">Customer Reviews</h3>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
