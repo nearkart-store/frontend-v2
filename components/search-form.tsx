@@ -32,7 +32,7 @@ export function SearchForm({ minimal = false }: SearchFormProps) {
             placeholder="Search products..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full h-11 pl-5 pr-12 bg-white backdrop-blur-lg rounded-full shadow-lg text-base focus:outline-none"
+            className="w-full h-11 pl-5 pr-12 text-black bg-white backdrop-blur-lg rounded-full shadow-lg text-base focus:outline-none"
           />
           <Button
             type="submit"
@@ -50,7 +50,7 @@ export function SearchForm({ minimal = false }: SearchFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className="relative w-full max-w-2xl mx-auto">
-      <div className="flex bg-white backdrop-blur-lg rounded-full shadow-lg overflow-hidden">
+      <div className="flex bg-white text-black backdrop-blur-lg rounded-full shadow-lg overflow-hidden">
         <Input
           type="search"
           placeholder="Search for products, brands, and more..."

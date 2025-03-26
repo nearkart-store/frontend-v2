@@ -4,7 +4,7 @@ interface ProductSpecificationsProps {
 
 export function ProductSpecifications({ specifications }: ProductSpecificationsProps) {
   return (
-    <div className="bg-white dark:bg-gray-950 p-6 rounded-lg shadow-sm">
+    <div className="bg-white dark:bg-background p-6 rounded-lg shadow-sm">
       <h3 className="text-lg font-semibold mb-4">Product Specifications</h3>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

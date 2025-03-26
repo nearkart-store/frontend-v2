@@ -76,7 +76,7 @@ export function ProductFilters({ query, category, minPrice = 0, maxPrice = 5000,
   }
 
   return (
-    <div className="bg-white dark:bg-gray-950 rounded-lg shadow-sm p-6">
+    <div className="bg-white dark:bg-zinc-950 rounded-lg shadow-sm p-6">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-lg font-semibold">Filters</h2>
         <Button variant="ghost" size="sm" onClick={resetFilters}>

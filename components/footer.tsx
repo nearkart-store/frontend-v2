@@ -12,19 +12,19 @@ export function Footer() {
               Find the best deals across multiple e-commerce platforms.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-blue-400">
+              <Link href="#" className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-primary">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-blue-400">
+              <Link href="#" className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-primary">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="#" className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-blue-400">
+              <Link href="#" className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-primary">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-blue-400">
+              <Link href="#" className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-primary">
                 <Youtube className="h-5 w-5" />
                 <span className="sr-only">YouTube</span>
               </Link>
@@ -37,7 +37,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/products?category=electronics"
-                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-blue-400"
+                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-primary"
                 >
                   Electronics
                 </Link>
@@ -45,7 +45,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/products?category=clothing"
-                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-blue-400"
+                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-primary"
                 >
                   Clothing
                 </Link>
@@ -53,7 +53,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/products?category=home-kitchen"
-                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-blue-400"
+                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-primary"
                 >
                   Home & Kitchen
                 </Link>
@@ -61,7 +61,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/products?category=beauty"
-                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-blue-400"
+                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-primary"
                 >
                   Beauty
                 </Link>
@@ -69,7 +69,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/products?category=books"
-                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-blue-400"
+                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-primary"
                 >
                   Books
                 </Link>
@@ -83,7 +83,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-gray-300   dark:text-gray-400 dark:hover:text-blue-400"
+                  className="text-gray-300   dark:text-gray-400 dark:hover:text-primary"
                 >
                   About Us
                 </Link>
@@ -91,7 +91,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-blue-400"
+                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-primary"
                 >
                   Contact Us
                 </Link>
@@ -99,7 +99,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/faq"
-                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-blue-400"
+                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-primary"
                 >
                   FAQ
                 </Link>
@@ -107,7 +107,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/privacy-policy"
-                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-blue-400"
+                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-primary"
                 >
                   Privacy Policy
                 </Link>
@@ -115,7 +115,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/terms-of-service"
-                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-blue-400"
+                  className="text-gray-300  hover:text-primary dark:text-gray-400 dark:hover:text-primary"
                 >
                   Terms of Service
                 </Link>

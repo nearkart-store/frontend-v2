@@ -29,13 +29,13 @@ export function Testimonials() {
   ]
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-900">
+    <section className="py-16 bg-gray-50 dark:bg-zinc-900">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">What Our Users Say</h2>
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
-            <div key={testimonial.id} className="bg-white dark:bg-gray-950 p-6 rounded-lg shadow-sm">
+            <div key={testimonial.id} className="bg-white dark:bg-zinc-950 p-6 rounded-lg shadow-sm">
               <div className="flex items-center mb-4">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                   <Image
