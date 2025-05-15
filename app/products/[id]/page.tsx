@@ -23,7 +23,8 @@ export default async function ProductPage({ params }: { params: { id: string } }
         <div className=" rounded-lg p-4 shadow-sm">
           <div className="relative aspect-square mb-4 overflow-hidden rounded-md">
             <Image
-              src={product.image || "/placeholder.svg"}
+              // src={product.image || "/placeholder.svg"}
+              src={"https://www.wearesync.co.uk/wp-content/uploads/2023/11/mbp16-m3-pro-max-silver-gallery1-1.jpg"}
               alt={product.name}
               fill
               className="object-contain"
@@ -31,17 +32,56 @@ export default async function ProductPage({ params }: { params: { id: string } }
             />
           </div>
           <div className="flex gap-2 overflow-x-auto pb-2">
-            {product.images &&
+            {/* {product.images &&
               product.images.map((img, i) => (
                 <div key={i} className="relative w-20 h-20 flex-shrink-0 rounded-md overflow-hidden border">
                   <Image
-                    src={img || "/placeholder.svg"}
+                    // src={img || "/placeholder.svg"}
+                    src={"https://m.media-amazon.com/images/I/51aXvjzcukL._SX522_.jpg?height=300&width=300"}
                     alt={`${product.name} view ${i + 1}`}
                     fill
                     className="object-cover"
                   />
                 </div>
-              ))}
+              ))} */}
+            
+                <div  className="relative w-20 h-20 flex-shrink-0 rounded-md overflow-hidden border">
+                  <Image
+                    // src={img || "/placeholder.svg"}
+                    src={"https://m.media-amazon.com/images/I/51aXvjzcukL._SX522_.jpg?height=300&width=300"}
+                    alt={`${product.name} view `}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div  className="relative w-20 h-20 flex-shrink-0 rounded-md overflow-hidden border">
+                  <Image
+                    // src={img || "/placeholder.svg"}
+                src={"https://m.media-amazon.com/images/I/61z5pPjUGJL._SX679_.jpg"}
+                    alt={`${product.name} view `}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div  className="relative w-20 h-20 flex-shrink-0 rounded-md overflow-hidden border">
+                  <Image
+                    // src={img || "/placeholder.svg"}
+                src={"https://m.media-amazon.com/images/I/81aL6b6qoOL._SX679_.jpg"}
+                    alt={`${product.name} view `}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div  className="relative w-20 h-20 flex-shrink-0 rounded-md overflow-hidden border">
+                  <Image
+                    // src={img || "/placeholder.svg"}
+                src={"https://m.media-amazon.com/images/I/61dEkbKWZmL._SX679_.jpg"}
+                    alt={`${product.name} view `}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+             
           </div>
         </div>
 

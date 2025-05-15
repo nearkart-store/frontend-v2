@@ -48,7 +48,7 @@ const mockProducts: Product[] = [
     prices: [
       {
         platform: "Amazon",
-        platformLogo: "/placeholder.svg?height=32&width=32",
+        platformLogo: "https://i.pinimg.com/originals/01/ca/da/01cada77a0a7d326d85b7969fe26a728.jpg?height=32&width=32",
         price: 1799.99,
         originalPrice: 1999.99,
         condition: "New",
@@ -57,7 +57,7 @@ const mockProducts: Product[] = [
       },
       {
         platform: "Apple Store",
-        platformLogo: "/placeholder.svg?height=32&width=32",
+        platformLogo: "https://img.favpng.com/3/10/12/apple-store-logo-ipad-clip-art-png-favpng-tnzVvbKBW0FAYRu8iREEd2wXb.jpg?height=32&width=32",
         price: 1999.99,
         originalPrice: 1999.99,
         condition: "New",
@@ -66,7 +66,7 @@ const mockProducts: Product[] = [
       },
       {
         platform: "Best Buy",
-        platformLogo: "/placeholder.svg?height=32&width=32",
+        platformLogo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlWuBcKIwkpSqbdEQosynYSOWeAfLtG8BRzA&s?height=32&width=32",
         price: 1849.99,
         originalPrice: 1999.99,
         condition: "New",
@@ -75,7 +75,7 @@ const mockProducts: Product[] = [
       },
       {
         platform: "Walmart",
-        platformLogo: "/placeholder.svg?height=32&width=32",
+        platformLogo: "https://latn.com/wp-content/uploads/2014/12/walmart-logo-vector.png?height=32&width=32",
         price: 1899.99,
         originalPrice: 1999.99,
         condition: "New",
