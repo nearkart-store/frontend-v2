@@ -8,7 +8,7 @@ export function Testimonials() {
         "Nearkart saved me over $200 on my new laptop purchase. I would have never found that deal without this amazing platform!",
       author: "Sarah Johnson",
       role: "Graphic Designer",
-      avatar: "/placeholder.svg?height=60&width=60",
+      avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDMkMETqcM9EVIuATe7tAO5CT1S4mbx7iXNg&s?height=60&width=60",
     },
     {
       id: 2,
@@ -16,7 +16,7 @@ export function Testimonials() {
         "I love how easy it is to compare prices across different stores. This is now my go-to site before making any tech purchase.",
       author: "Michael Chen",
       role: "Software Engineer",
-      avatar: "/placeholder.svg?height=60&width=60",
+      avatar: "https://static.wixstatic.com/media/45281b_c4363a6b9fad4d348378989dca653f90~mv2.jpg/v1/fill/w_640,h_554,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/45281b_c4363a6b9fad4d348378989dca653f90~mv2.jpg?height=60&width=60",
     },
     {
       id: 3,
@@ -24,7 +24,7 @@ export function Testimonials() {
         "The price history feature helped me decide when to buy my new TV. I waited for a week and saved $150. Totally worth it!",
       author: "Emily Rodriguez",
       role: "Marketing Manager",
-      avatar: "/placeholder.svg?height=60&width=60",
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29ycG9yYXRlJTIwd29tYW58ZW58MHx8MHx8fDA%3D?height=60&width=60",
     },
   ]
 
