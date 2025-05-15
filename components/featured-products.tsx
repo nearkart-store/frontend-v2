@@ -11,7 +11,7 @@ export function FeaturedProducts() {
       description: "Apple's most powerful laptop with the M2 Pro chip",
       price: 1999.99,
       discount: 10,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "https://www.wearesync.co.uk/wp-content/uploads/2023/11/mbp16-m3-pro-max-silver-gallery1-1.jpg?height=300&width=300",
       category: "electronics",
     },
     {
@@ -20,7 +20,7 @@ export function FeaturedProducts() {
       description: "Premium noise-cancelling headphones with exceptional sound quality",
       price: 349.99,
       discount: 15,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "https://m.media-amazon.com/images/I/51aXvjzcukL._SX522_.jpg?height=300&width=300",
       category: "electronics",
     },
     {
@@ -29,7 +29,7 @@ export function FeaturedProducts() {
       description: "Flagship smartphone with advanced camera system",
       price: 1199.99,
       discount: 0,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "https://m.media-amazon.com/images/I/41X9qNxoJKL._SX300_SY300_QL70_FMwebp_.jpg?height=300&width=300",
       category: "electronics",
     },
     {
@@ -38,7 +38,7 @@ export function FeaturedProducts() {
       description: "Stunning 4K OLED TV with perfect blacks and vibrant colors",
       price: 1799.99,
       discount: 20,
-      image: "/placeholder.svg?height=300&width=300",
+      image: "https://images.samsung.com/is/image/samsung/p6pim/in/qa55s90daulxl/gallery/in-oled-s90d-qa55s90daulxl-540992638?$684_547_PNG$?height=300&width=300",
       category: "electronics",
     },
   ]
