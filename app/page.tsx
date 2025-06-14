@@ -5,10 +5,16 @@ import { HowItWorks } from "@/components/how-it-works"
 import { Testimonials } from "@/components/testimonials"
 import { Newsletter } from "@/components/newsletter"
 import { HeroSection } from "@/components/hero"
+import { Footer } from "@/components/footer"
+import { Header } from "@/components/header"
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
+
+     
+      {/* Header */}
+      <Header />
       {/* Hero Section */}
       <HeroSection />
 
@@ -26,6 +32,9 @@ export default function Home() {
 
       {/* Newsletter */}
       <Newsletter />
+
+      {/* Footer */}
+      <Footer />
     </main>
   )
 }

@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "NearKart - Find the best deals across multiple e-commerce platforms",
   description: "Find the best deals across multiple e-commerce platforms",
-  keywords: ["e-commerce", "shopping", "deals", "price comparison"],  
+  keywords: ["e-commerce", "shopping", "deals", "price comparison"],
   viewport: "width=device-width, initial-scale=1",
 }
 
@@ -25,14 +25,15 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
-      </body>
+      <html lang="en" suppressHydrationWarning>
+        <body className={inter.className}>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+            {/* <Header /> */}
+            {children}
+            <Neo />
+            {/* <Footer /> */}
+          </ThemeProvider>
+        </body>
       </html>
     </ClerkProvider>
   )
@@ -41,3 +42,4 @@ export default function RootLayout({
 
 
 import './globals.css'
+import Neo from "@/components/neo-ai"
