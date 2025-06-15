@@ -6,12 +6,22 @@ export interface Category {
 
 export interface Product {
   Id: number
+  id: number
   Name: string
+  name: string
   Description: string
+  description: string
   specifications: Record<string, any>
   Images: string[]
   ProductLinks: ProductLink[]
   reviews: Review[]
+  discount: number;
+  rating: number;
+  reviewCount: number;
+  category: string;
+  price: string;
+  image?: string; // Optional, for single image display
+// Optional, for multiple images display
 }
 
 export interface ProductLink {
