@@ -31,8 +31,8 @@ async function runChat(prompt: string): Promise<ChatResponse> {
   ;
   const MODEL_NAME: string = process.env.NEXT_PUBLIC_MODEL_NAME ?? " ";
 
-  console.log('API_KEY:', API_KEY);
-  console.log('MODEL_NAME:', MODEL_NAME);
+  // console.log('API_KEY:', API_KEY);
+  // console.log('MODEL_NAME:', MODEL_NAME);
 
   try {
     const body: ChatRequestBody = {
