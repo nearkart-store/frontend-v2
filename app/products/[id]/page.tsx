@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { notFound } from "next/navigation"
-import { getProductById, getSimilarProducts } from "@/lib/actions"
+import { getProduct, getSimilarProducts } from "@/lib/actions"
 import { PriceComparison } from "@/components/price-comparison"
 import { ProductSpecifications } from "@/components/product-specifications"
 import { ProductReviews } from "@/components/product-reviews"
@@ -8,23 +8,23 @@ import { SimilarProducts } from "@/components/similar-products"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default async function ProductPage({ params }: { params: { id: string } }) {
-  const product = await getProductById(params.id)
+  const product = await getProduct(params.id)
 
   if (!product) {
     notFound()
   }
 
-  const similarProducts = await getSimilarProducts(product.category, product.id)
+  const similarProducts = await getSimilarProducts(params.id)
 
   return (
     <main className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
         {/* Product Images */}
-        <div className=" rounded-lg p-4 shadow-sm">
+        <div className="bg-white rounded-lg p-4 shadow-sm">
           <div className="relative aspect-square mb-4 overflow-hidden rounded-md">
             <Image
               src={product.image || "/placeholder.svg"}
-              alt={product.name}
+              alt={product.name || "Product Image"}
               fill
               className="object-contain"
               priority
@@ -36,7 +36,7 @@ export default async function ProductPage({ params }: { params: { id: string } }
                 <div key={i} className="relative w-20 h-20 flex-shrink-0 rounded-md overflow-hidden border">
                   <Image
                     src={img || "/placeholder.svg"}
-                    alt={`${product.name} view ${i + 1}`}
+                    alt={`${product.name} view ${i + 1}` || "Product Image"}
                     fill
                     className="object-cover"
                   />
@@ -70,38 +70,55 @@ export default async function ProductPage({ params }: { params: { id: string } }
 
           <div className="mb-6">
             <h2 className="text-xl font-semibold mb-2">Description</h2>
-            <p className="text-gray-700 dark:text-gray-400">{product.description}</p>
+            <p className="text-gray-700">{product.description}</p>
           </div>
 
-          <PriceComparison prices={product.prices} />
+          <PriceComparison
+            prices={
+              (product.prices || []).map((p: any) => ({
+                platform: p.platform || p.store || "",
+                platformLogo: p.platformLogo || "",
+                originalPrice: p.originalPrice ?? p.price ?? 0,
+                price: p.price ?? 0,
+                url: p.url || "",
+                rating: p.rating ?? 0,
+                condition: p.condition || "New",
+                delivery: p.delivery || "Standard",
+              }))
+            }
+          />
         </div>
       </div>
 
       <Tabs defaultValue="specifications" className="mb-12">
-        <TabsList className="grid w-full grid-cols-3">
+        <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="specifications">Specifications</TabsTrigger>
           <TabsTrigger value="reviews">Reviews</TabsTrigger>
-          <TabsTrigger value="comparison">Price History</TabsTrigger>
+
         </TabsList>
         <TabsContent value="specifications">
-          <ProductSpecifications specifications={product.specifications || {}} />
+          <ProductSpecifications
+            specifications={
+              product.specifications
+                ? Object.fromEntries(
+                  Object.entries(product.specifications).map(([key, value]) => [
+                    key,
+                    typeof value === "object" && value !== null
+                      ? JSON.stringify(value)
+                      : value ?? "",
+                  ])
+                )
+                : {}
+            }
+          />
         </TabsContent>
         <TabsContent value="reviews">
           <ProductReviews reviews={product.reviews || []} />
         </TabsContent>
-        <TabsContent value="comparison">
-          <div className="bg-white dark:bg-background p-6 rounded-lg shadow-sm">
-            <h3 className="text-lg font-semibold mb-4">Price History</h3>
-            {/* Price history chart would go here */}
-            <div className="h-64 bg-gray-100 dark:bg-background rounded flex items-center justify-center">
-              Price history chart placeholder
-            </div>
-          </div>
-        </TabsContent>
+
       </Tabs>
 
       <SimilarProducts products={similarProducts} />
     </main>
   )
 }
-

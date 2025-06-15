@@ -6,6 +6,23 @@ import { Button } from "@/components/ui/button"
 import { ExternalLink } from "lucide-react"
 import type { PriceInfo } from "@/lib/types"
 
+// ✅ Helper for fallback platform logos
+const getPlatformLogo = (platform: string): string => {
+  const logos: Record<string, string> = {
+    Amazon: "https://i.pinimg.com/originals/01/ca/da/01cada77a0a7d326d85b7969fe26a728.jpg",
+    Flipkart: "https://www.citypng.com/public/uploads/preview/hd-flipkart-round-logo-icon-transparent-png-701751694966204grvmunpzzf.png",
+    Snapdeal: "https://upload.wikimedia.org/wikipedia/en/3/35/Snapdeal_Logo_new.png",
+    Croma: "https://logowik.com/content/uploads/images/croma9414.logowik.com.webp",
+    Reliance: "https://i.pinimg.com/736x/de/64/63/de646309009817507baf01587f107106.jpg",
+    Myntra: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlMpP1YYpCwucDumKnSUkBkXNtmSIPzQfb7Q&s",
+    Adidas: "https://icon2.cleanpng.com/20180426/gee/avtkfi4kg.webp",
+    Apple: "https://fabrikbrands.com/wp-content/uploads/Apple-Logo-History-1.png"
+
+  }
+
+  return logos[platform] || "/placeholder.svg"
+}
+
 interface PriceComparisonProps {
   prices: PriceInfo[]
 }
@@ -13,10 +30,7 @@ interface PriceComparisonProps {
 export function PriceComparison({ prices }: PriceComparisonProps) {
   const [showAll, setShowAll] = useState(false)
 
-  // Sort prices by price (lowest first)
   const sortedPrices = [...prices].sort((a, b) => a.price - b.price)
-
-  // Display only first 3 prices unless showAll is true
   const displayPrices = showAll ? sortedPrices : sortedPrices.slice(0, 3)
 
   return (
@@ -27,13 +41,17 @@ export function PriceComparison({ prices }: PriceComparisonProps) {
         {displayPrices.map((price, index) => (
           <div
             key={`${price.platform}-${index}`}
-            className={`flex items-center justify-between p-3 rounded-lg ${index === 0 ? "bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-900" : ""
+            className={`flex items-center justify-between p-3 rounded-lg ${index === 0
+                ? "bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-900"
+                : ""
               }`}
           >
             <div className="flex items-center space-x-3">
               <div className="relative w-8 h-8">
                 <Image
-                  src={price.platformLogo || "/placeholder.svg"}
+                  // src={getPlatformLogo(price.platform) || "/logo.png" || price.platformLogo }
+                  src={"/logo.png" }
+                  
                   alt={price.platform}
                   fill
                   className="object-contain"
@@ -49,9 +67,11 @@ export function PriceComparison({ prices }: PriceComparisonProps) {
 
             <div className="flex items-center space-x-4">
               <div className="text-right">
-                <p className="font-bold text-lg">${price.price.toFixed(2)}</p>
+                <p className="font-bold text-lg">₹{price.price.toFixed(2)}</p>
                 {price.originalPrice > price.price && (
-                  <p className="text-xs text-gray-500 line-through">${price.originalPrice.toFixed(2)}</p>
+                  <p className="text-xs text-gray-500 line-through">
+                    ₹{price.originalPrice.toFixed(2)}
+                  </p>
                 )}
               </div>
 
@@ -67,11 +87,14 @@ export function PriceComparison({ prices }: PriceComparisonProps) {
       </div>
 
       {prices.length > 3 && (
-        <Button variant="ghost" className="w-full mt-4" onClick={() => setShowAll(!showAll)}>
+        <Button
+          variant="ghost"
+          className="w-full mt-4"
+          onClick={() => setShowAll(!showAll)}
+        >
           {showAll ? "Show Less" : `Show All (${prices.length})`}
         </Button>
       )}
     </div>
   )
 }
-
