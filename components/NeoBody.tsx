@@ -28,10 +28,10 @@ const NeoBody = () => {
     e.preventDefault();
     if (!isInputEmpty) await submit();
   };
-  console.log(input)
-  console.log(recentPrompts)
-  console.log(displayResult)
-  console.log(result)
+  // console.log(input)
+  // console.log(recentPrompts)
+  // console.log(displayResult)
+  // console.log(result)
   // Auto-scroll to bottom on new result
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
