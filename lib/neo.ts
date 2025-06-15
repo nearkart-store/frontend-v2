@@ -26,9 +26,13 @@ interface ChatResponse {
 
 async function runChat(prompt: string): Promise<ChatResponse> {
   // const API_KEY = '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';
-  const API_KEY = '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';
-  const MODEL_NAME = 'deepseek/deepseek-r1-0528:free';
+  // const API_KEY = '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';
+  const API_KEY = process.env.NEXT_PUBLIC_API_KEY
+  ;
+  const MODEL_NAME: string = process.env.NEXT_PUBLIC_MODEL_NAME ?? " ";
 
+  console.log('API_KEY:', API_KEY);
+  console.log('MODEL_NAME:', MODEL_NAME);
 
   try {
     const body: ChatRequestBody = {
