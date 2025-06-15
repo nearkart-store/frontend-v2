@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { ModeToggle } from "./mode-toggle"
 import { Menu, X, Heart, User } from "lucide-react"
 import { UserLogin } from "./user-login"
+import Image from "next/image"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,6 +25,13 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
+            <Image 
+              src="/logo.png"
+              alt="Logo"
+              width={40}
+              height={40}
+              className="rounded-full mr-2"
+            />
             <span className="text-2xl font-bold ">NearKart</span>
           </Link>
 

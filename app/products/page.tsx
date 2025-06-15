@@ -2,6 +2,8 @@ import { ProductFilters } from "@/components/product-filters"
 import { ProductGrid } from "@/components/product-grid"
 import { ProductSort } from "@/components/product-sort"
 import { getProducts } from "@/lib/actions"
+// Import the Product type from its module, adjust the path as needed
+import type { Product } from "@/lib/types"
 
 export default async function ProductsPage({
   searchParams,
@@ -15,7 +17,18 @@ export default async function ProductsPage({
   const brands = typeof searchParams.brands === "string" ? searchParams.brands.split(",") : []
   const sort = typeof searchParams.sort === "string" ? searchParams.sort : "relevance"
 
-  const products = await getProducts({ query, category, minPrice, maxPrice, brands, sort })
+  const transformedProducts = await getProducts({ query, category, minPrice, maxPrice, brands, sort })
+
+  // Map TransformedProduct[] to Product[]
+  const products: Product[] = transformedProducts.map((tp: any) => ({
+    Id: tp.Id ?? tp.id ?? "",
+    Name: tp.Name ?? tp.name ?? "",
+    Description: tp.Description ?? tp.description ?? "",
+    Images: tp.Images ?? tp.images ?? [],
+    ProductLinks: tp.ProductLinks ?? tp.productLinks ?? [],
+    // Add other fields if Product has more properties
+    ...tp,
+  }))
 
   return (
     <main className="container mx-auto px-4 py-8">

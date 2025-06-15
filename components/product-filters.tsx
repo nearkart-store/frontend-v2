@@ -15,13 +15,13 @@ interface ProductFiltersProps {
   brands: string[]
 }
 
-export function ProductFilters({ query, category, minPrice = 0, maxPrice = 5000, brands = [] }: ProductFiltersProps) {
+export function ProductFilters({ query, category, minPrice = 0, maxPrice = 200000, brands = [] }: ProductFiltersProps) {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const [isPending, startTransition] = useTransition()
 
-  const [priceRange, setPriceRange] = useState<[number, number]>([minPrice || 0, maxPrice || 5000])
+  const [priceRange, setPriceRange] = useState<[number, number]>([minPrice || 0, maxPrice || 200000])
   const [selectedBrands, setSelectedBrands] = useState<string[]>(brands)
 
   const availableBrands = [
@@ -33,6 +33,23 @@ export function ProductFilters({ query, category, minPrice = 0, maxPrice = 5000,
     { id: "hp", name: "HP" },
     { id: "lenovo", name: "Lenovo" },
     { id: "asus", name: "Asus" },
+    { id: "oneplus", name: "OnePlus" },
+    { id: "google", name: "Google" },
+    { id: "xiaomi", name: "Xiaomi" },
+    { id: "nike", name: "Nike" },
+    { id: "adidas", name: "Adidas" },
+    { id: "levi", name: "Levi's" },
+    { id: "puma", name: "Puma" },
+    { id: "dyson", name: "Dyson" },
+    { id: "philips", name: "Philips" },
+    { id: "bose", name: "Bose" },
+    { id: "jbl", name: "JBL" },
+    { id: "sennheiser", name: "Sennheiser" },
+    { id: "logitech", name: "Logitech" },
+    { id: "razer", name: "Razer" },
+    { id: "xbox", name: "Xbox" },
+    { id: "playstation", name: "PlayStation" },
+    { id: "corsair", name: "Corsair" },
   ]
 
   const handleBrandChange = (brand: string, checked: boolean) => {
@@ -63,7 +80,7 @@ export function ProductFilters({ query, category, minPrice = 0, maxPrice = 5000,
   }
 
   const resetFilters = () => {
-    setPriceRange([0, 5000])
+    setPriceRange([0, 200000])
     setSelectedBrands([])
 
     const params = new URLSearchParams()
@@ -92,13 +109,13 @@ export function ProductFilters({ query, category, minPrice = 0, maxPrice = 5000,
               <Slider
                 value={priceRange}
                 min={0}
-                max={5000}
-                step={100}
+                max={200000}
+                step={1000}
                 onValueChange={(value) => setPriceRange(value as [number, number])}
               />
               <div className="flex items-center justify-between">
-                <span className="text-sm">₹{priceRange[0]}</span>
-                <span className="text-sm">₹{priceRange[1]}</span>
+                <span className="text-sm">₹{priceRange[0].toLocaleString()}</span>
+                <span className="text-sm">₹{priceRange[1].toLocaleString()}</span>
               </div>
             </div>
           </AccordionContent>
@@ -107,7 +124,7 @@ export function ProductFilters({ query, category, minPrice = 0, maxPrice = 5000,
         <AccordionItem value="brand">
           <AccordionTrigger>Brand</AccordionTrigger>
           <AccordionContent>
-            <div className="space-y-2">
+            <div className="space-y-2 max-h-60 overflow-y-auto">
               {availableBrands.map((brand) => (
                 <div key={brand.id} className="flex items-center space-x-2">
                   <Checkbox
@@ -167,4 +184,3 @@ export function ProductFilters({ query, category, minPrice = 0, maxPrice = 5000,
     </div>
   )
 }
-
