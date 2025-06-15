@@ -26,7 +26,7 @@ const mockData = {
           ProductLinks: [
             {
               ProductID: 1,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Apple-iPhone-15-128-GB/dp/B0CHX1W1XY",
               Price: "61500.00",
               Rating: "4.5",
@@ -67,7 +67,7 @@ const mockData = {
           ProductLinks: [
             {
               ProductID: 2,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Samsung-Galaxy-Smartphone-Silver-Storage/dp/B0DSKNLFBG",
               Price: "80999.00",
               Rating: "4.6",
@@ -104,11 +104,11 @@ const mockData = {
             RAM: "12GB/16GB",
             Storage: ["256GB", "512GB"],
           },
-          Images: ["https://m.media-amazon.com/images/I/71ZOtVaFc7L._SX679_.jpg"],
+          Images: ["https://m.media-amazon.com/images/I/41+WyW0KOgL._SY300_SX300_.jpg"],
           ProductLinks: [
             {
               ProductID: 3,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/OnePlus-12-Silky-Black-256GB/dp/B0CQHX8KLM",
               Price: "64999.00",
               Rating: "4.4",
@@ -149,7 +149,7 @@ const mockData = {
           ProductLinks: [
             {
               ProductID: 4,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Google-Pixel-Pro-Obsidian-128GB/dp/B0CGTNPFZD",
               Price: "84999.00",
               Rating: "4.3",
@@ -186,11 +186,11 @@ const mockData = {
             RAM: "12GB/16GB",
             Storage: ["256GB", "512GB", "1TB"],
           },
-          Images: ["https://m.media-amazon.com/images/I/71nP8YgVzBL._SX679_.jpg"],
+          Images: ["https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-ultra-new.jpg"],
           ProductLinks: [
             {
               ProductID: 5,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Xiaomi-14-Ultra-Black-256GB/dp/B0D1234567",
               Price: "89999.00",
               Rating: "4.5",
@@ -237,14 +237,14 @@ const mockData = {
           ProductLinks: [
             {
               ProductID: 6,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Apple-MacBook-Laptop-12%E2%80%91core-16%E2%80%91core/dp/B0DLHQC28P",
               Price: "191990.00",
               Rating: "5.0",
             },
             {
               ProductID: 6,
-              WebsiteName: "Apple Store",
+              WebsiteName: "Apple",
               WebsiteURL: "https://www.apple.com/in/macbook-pro/",
               Price: "199900.00",
               Rating: "4.9",
@@ -274,11 +274,11 @@ const mockData = {
             Storage: "512GB/1TB SSD",
             Display: "13.4-inch OLED/LCD",
           },
-          Images: ["https://m.media-amazon.com/images/I/61Zs7MZxb9L._SX679_.jpg"],
+          Images: ["https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9350/media-gallery/platinum/notebook-xps-13-9350-t-oled-sl-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=699&qlt=100,1&resMode=sharp2&size=699,402&chrss=full"],
           ProductLinks: [
             {
               ProductID: 7,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Dell-XPS-13-Plus-9320/dp/B0B123456",
               Price: "149990.00",
               Rating: "4.4",
@@ -315,11 +315,11 @@ const mockData = {
             Storage: "1TB SSD",
             Display: "13.5-inch OLED touchscreen",
           },
-          Images: ["https://m.media-amazon.com/images/I/71QvGvJZzgL._SX679_.jpg"],
+          Images: ["https://m.media-amazon.com/images/I/71vFiBdplZL.jpg"],
           ProductLinks: [
             {
               ProductID: 8,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/HP-Spectre-x360-13-5-inch/dp/B0C123456",
               Price: "139990.00",
               Rating: "4.5",
@@ -356,11 +356,11 @@ const mockData = {
             Storage: "512GB SSD",
             Display: "14-inch WUXGA IPS",
           },
-          Images: ["https://m.media-amazon.com/images/I/61vFO2yOHsL._SX679_.jpg"],
+          Images: ["https://p1-ofp.static.pub//fes/cms/2024/08/08/7awauyy7km5d1zq66pypo0ezc4h6f7268280.png"],
           ProductLinks: [
             {
               ProductID: 9,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Lenovo-ThinkPad-X1-Carbon-Gen10/dp/B0D123456",
               Price: "159990.00",
               Rating: "4.6",
@@ -397,11 +397,11 @@ const mockData = {
             RAM: "32GB DDR5",
             Storage: "1TB SSD",
           },
-          Images: ["https://m.media-amazon.com/images/I/81vFqKZzVeL._SX679_.jpg"],
+          Images: ["https://dlcdnwebimgs.asus.com/gain/DBB47F70-325D-4510-9E3E-0548FEF67FB1/w185/fwebp"],
           ProductLinks: [
             {
               ProductID: 10,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/ASUS-ROG-Zephyrus-G14-GA403UV/dp/B0E123456",
               Price: "189990.00",
               Rating: "4.7",
@@ -448,7 +448,7 @@ const mockData = {
           ProductLinks: [
             {
               ProductID: 11,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Sony-WH-1000XM5-Cancelling-Headphones-Connectivity/dp/B0BZP2H373",
               Price: "29990.00",
               Rating: "4.4",
@@ -485,11 +485,11 @@ const mockData = {
             Features: ["Aware Mode", "EQ Control"],
             "Noise Cancellation": "Active",
           },
-          Images: ["https://m.media-amazon.com/images/I/51JKxzKoysL._SX679_.jpg"],
+          Images: ["https://m.media-amazon.com/images/I/41-YRwc6lFL._SX300_SY300_QL70_FMwebp_.jpg"],
           ProductLinks: [
             {
               ProductID: 12,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Bose-QuietComfort-45-Bluetooth-Headphones/dp/B098FKXT8L",
               Price: "32900.00",
               Rating: "4.3",
@@ -526,18 +526,18 @@ const mockData = {
             Features: ["Spatial Audio", "Adaptive EQ", "Transparency Mode"],
             Chip: "Apple H1",
           },
-          Images: ["https://m.media-amazon.com/images/I/81A7MjCuNgL._SX679_.jpg"],
+          Images: ["https://www.designinfo.in/wp-content/uploads/2024/04/Apple-AirPods-Max-Sky-Blue-1.webp"],
           ProductLinks: [
             {
               ProductID: 13,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Apple-AirPods-Max-Space-Gray/dp/B08PZJN7BD",
               Price: "59900.00",
               Rating: "4.2",
             },
             {
               ProductID: 13,
-              WebsiteName: "Apple Store",
+              WebsiteName: "Apple",
               WebsiteURL: "https://www.apple.com/in/airpods-max/",
               Price: "59900.00",
               Rating: "4.3",
@@ -567,11 +567,11 @@ const mockData = {
             Impedance: "300 ohms",
             Features: ["Detachable cable", "Velour ear pads"],
           },
-          Images: ["https://m.media-amazon.com/images/I/71QvGvJZzgL._SX679_.jpg"],
+          Images: ["https://m.media-amazon.com/images/I/61M8UEZMQAL._SX522_.jpg"],
           ProductLinks: [
             {
               ProductID: 14,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Sennheiser-HD-660S2-Headphones/dp/B0F123456",
               Price: "54990.00",
               Rating: "4.6",
@@ -608,11 +608,11 @@ const mockData = {
             Features: ["Adaptive Noise Cancelling", "Voice Assistant"],
             "Quick Charge": "2 hours in 10 minutes",
           },
-          Images: ["https://m.media-amazon.com/images/I/71nP8YgVzBL._SX679_.jpg"],
+          Images: ["https://m.media-amazon.com/images/I/61PgmOUPZ3L.jpg"],
           ProductLinks: [
             {
               ProductID: 15,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/JBL-Live-660NC-Wireless-Headphones/dp/B08G123456",
               Price: "14999.00",
               Rating: "4.1",
@@ -668,7 +668,7 @@ const mockData = {
             },
             {
               ProductID: 16,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Nike-Air-Force-White-White/dp/B0H123456",
               Price: "7995.00",
               Rating: "4.4",
@@ -704,14 +704,14 @@ const mockData = {
           ProductLinks: [
             {
               ProductID: 17,
-              WebsiteName: "Adidas Store",
+              WebsiteName: "Adidas",
               WebsiteURL: "https://www.adidas.co.in/ultraboost-22-shoes/GZ0127.html",
               Price: "17999.00",
               Rating: "4.6",
             },
             {
               ProductID: 17,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/adidas-Ultraboost-22-Running-Shoes/dp/B0I123456",
               Price: "18999.00",
               Rating: "4.5",
@@ -742,7 +742,7 @@ const mockData = {
             Closure: "Zip fly with button",
           },
           Images: [
-            "https://lsco.scene7.com/is/image/lsco/045113654-front-pdp-lse?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=750&hei=1000",
+            "https://levi.in/cdn/shop/files/182981482_01_Front_4b14f5bd-3c6a-4603-acda-096c5675d825.jpg?v=1740488440",
           ],
           ProductLinks: [
             {
@@ -754,7 +754,7 @@ const mockData = {
             },
             {
               ProductID: 18,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Levis-511-Slim-Jeans/dp/B0J123456",
               Price: "4299.00",
               Rating: "4.2",
@@ -797,7 +797,7 @@ const mockData = {
             },
             {
               ProductID: 19,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Puma-Essentials-Logo-Hoodie/dp/B0K123456",
               Price: "3299.00",
               Rating: "4.3",
@@ -827,7 +827,7 @@ const mockData = {
             Neckline: "Crew neck",
             Sleeve: "Short sleeve",
           },
-          Images: ["/placeholder.svg?height=400&width=400"],
+          Images: ["https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/22967444/2023/5/2/8bc4f76c-ae15-4f10-baf6-54ae094a55c11683036063013HMOversizedT-Shirt1.jpg"],
           ProductLinks: [
             {
               ProductID: 20,
@@ -865,7 +865,7 @@ const mockData = {
       Products: [
         {
           Id: 21,
-          Name: "Dyson V15 Detect",
+          Name: "Dyson Air Purifier",
           Description:
             "Advanced cordless vacuum with laser dust detection, powerful suction, and intelligent cleaning modes.",
           specifications: {
@@ -875,7 +875,7 @@ const mockData = {
             "Bin Capacity": "0.77L",
           },
           Images: [
-            "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/products/vacuum-cleaners/V15/V15-Detect/PDP/Dyson-V15-Detect-Absolute-PDP-Hero-1.jpg",
+            "https://dyson-h.assetsadobe2.com/is/image/content/dam/dyson/it/compare/ec/Column-TP09.jpg",
           ],
           ProductLinks: [
             {
@@ -887,7 +887,7 @@ const mockData = {
             },
             {
               ProductID: 21,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Dyson-V15-Detect-Absolute/dp/B0L123456",
               Price: "67900.00",
               Rating: "4.6",
@@ -918,7 +918,7 @@ const mockData = {
             "Energy Rating": "3 Star",
           },
           Images: [
-            "https://www.lg.com/in/images/refrigerators/md07513049/gallery/GC-X247CSAV-Refrigerators-Front-View-D-01.jpg",
+            "https://m.media-amazon.com/images/I/71aw1Z-MGkL._SY741_.jpg",
           ],
           ProductLinks: [
             {
@@ -930,7 +930,7 @@ const mockData = {
             },
             {
               ProductID: 22,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/LG-687L-Side-Refrigerator/dp/B0M123456",
               Price: "92990.00",
               Rating: "4.3",
@@ -960,7 +960,7 @@ const mockData = {
             Power: "2225W",
           },
           Images: [
-            "https://www.philips.co.in/c-dam/b2c/category-pages/household/kitchen-appliances/air-fryers/HD9270_90-IMS-en_IN-001.jpg",
+            "https://m.media-amazon.com/images/I/31NKOu2j4aL._SX300_SY300_QL70_FMwebp_.jpg",
           ],
           ProductLinks: [
             {
@@ -972,7 +972,7 @@ const mockData = {
             },
             {
               ProductID: 23,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Philips-HD9270-90-Digital-Airfryer/dp/B0N123456",
               Price: "26995.00",
               Rating: "4.4",
@@ -1003,7 +1003,7 @@ const mockData = {
             "Energy Rating": "5 Star",
           },
           Images: [
-            "https://images.samsung.com/is/image/samsung/in-front-loading-washer-ww80t504dan-ww80t504dan-tl-frontsilver-279117803",
+            "https://images.samsung.com/is/image/samsung/p6pim/in/ww80t4040ce-tl/gallery/in-front-loading-washer-ww70t4020cheo-377223-ww80t4040ce-tl-395196808?$684_547_PNG$",
           ],
           ProductLinks: [
             {
@@ -1015,7 +1015,7 @@ const mockData = {
             },
             {
               ProductID: 24,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Samsung-8kg-Front-Load-Washing-Machine/dp/B0O123456",
               Price: "44990.00",
               Rating: "4.2",
@@ -1045,7 +1045,7 @@ const mockData = {
             Features: ["Copper condenser", "Wi-Fi enabled", "4-in-1 adjustable mode"],
             "Energy Rating": "3 Star",
           },
-          Images: ["/placeholder.svg?height=400&width=400"],
+          Images: ["https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTXYtap2X1Fc-nxSP-cKW7r9eOsnPgnwZw170vBLUSD0dx8plOM_wrSTefF1DHRHLPMPz3ZdpUkYRhfxrMejYUS1K107vqWso0CvvZIWNpDWaErPni925ybtQ"],
           ProductLinks: [
             {
               ProductID: 25,
@@ -1056,7 +1056,7 @@ const mockData = {
             },
             {
               ProductID: 25,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Voltas-1-5-Ton-Split-AC/dp/B0P123456",
               Price: "34990.00",
               Rating: "4.0",
@@ -1097,7 +1097,7 @@ const mockData = {
           ProductLinks: [
             {
               ProductID: 26,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Atomic-Habits-James-Clear/dp/1847941834",
               Price: "399.00",
               Rating: "4.6",
@@ -1139,7 +1139,7 @@ const mockData = {
           ProductLinks: [
             {
               ProductID: 27,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Psychology-Money-Morgan-Housel/dp/0857197681",
               Price: "350.00",
               Rating: "4.5",
@@ -1180,7 +1180,7 @@ const mockData = {
           ProductLinks: [
             {
               ProductID: 28,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Sapiens-Humankind-Yuval-Noah-Harari/dp/0099590085",
               Price: "499.00",
               Rating: "4.4",
@@ -1222,7 +1222,7 @@ const mockData = {
           ProductLinks: [
             {
               ProductID: 29,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Think-Grow-Rich-Napoleon-Hill/dp/1585424331",
               Price: "199.00",
               Rating: "4.3",
@@ -1264,7 +1264,7 @@ const mockData = {
           ProductLinks: [
             {
               ProductID: 30,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Alchemist-Paulo-Coelho/dp/0062315005",
               Price: "299.00",
               Rating: "4.2",
@@ -1308,7 +1308,7 @@ const mockData = {
             Connectivity: "LIGHTSPEED wireless",
           },
           Images: [
-            "https://resource.logitechg.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight/gallery/pro-x-superlight-gallery-1.png",
+            "https://m.media-amazon.com/images/I/31ybTgS5ycL._SX300_SY300_QL70_FMwebp_.jpg",
           ],
           ProductLinks: [
             {
@@ -1320,7 +1320,7 @@ const mockData = {
             },
             {
               ProductID: 31,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Logitech-G-Pro-X-Superlight/dp/B0Q123456",
               Price: "14495.00",
               Rating: "4.5",
@@ -1350,7 +1350,7 @@ const mockData = {
             Connectivity: "USB-C wired",
           },
           Images: [
-            "https://assets2.razerzone.com/images/pnx.assets/618c0b65424070a1017a7168b8a8c8c8/razer-blackwidow-v4-pro-gallery-hero.jpg",
+            "https://m.media-amazon.com/images/I/41MgoJACqsL._SY300_SX300_QL70_FMwebp_.jpg",
           ],
           ProductLinks: [
             {
@@ -1362,7 +1362,7 @@ const mockData = {
             },
             {
               ProductID: 32,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Razer-BlackWidow-V4-Pro/dp/B0R123456",
               Price: "26999.00",
               Rating: "4.3",
@@ -1391,7 +1391,7 @@ const mockData = {
             Features: ["Hybrid D-pad", "Textured grips", "3.5mm audio jack"],
             "Battery Life": "Up to 40 hours",
           },
-          Images: ["/placeholder.svg?height=400&width=400"],
+          Images: ["https://m.media-amazon.com/images/I/51USu8qNI4L.jpg"],
           ProductLinks: [
             {
               ProductID: 33,
@@ -1402,7 +1402,7 @@ const mockData = {
             },
             {
               ProductID: 33,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Xbox-Wireless-Controller-Carbon-Black/dp/B0S123456",
               Price: "6490.00",
               Rating: "4.4",
@@ -1431,7 +1431,7 @@ const mockData = {
             Connectivity: "USB-C, Bluetooth",
             "Battery Life": "12-15 hours",
           },
-          Images: ["/placeholder.svg?height=400&width=400"],
+          Images: ["https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSXIGaxJ7Vd6IT3Z08gndVVqVSa9vaULWUYWU4CQ0WGv2x8aWnUc8tRVb0RqVXGfbuhqlMZ0kdpV_tFRFTsSgQYUQNYCcFLGUYsUOWaXIU"],
           ProductLinks: [
             {
               ProductID: 34,
@@ -1442,7 +1442,7 @@ const mockData = {
             },
             {
               ProductID: 34,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/PlayStation-DualSense-Wireless-Controller/dp/B0T123456",
               Price: "6490.00",
               Rating: "4.5",
@@ -1472,7 +1472,7 @@ const mockData = {
             Build: "Aircraft-grade aluminum frame",
           },
           Images: [
-            "https://assets.corsair.com/image/upload/c_pad,q_auto,h_1024,w_1024,f_auto/products/Gaming-Keyboards/CH-9127414-NA/Gallery/K95_PLAT_XT_01.webp",
+            "https://m.media-amazon.com/images/I/51Yo3h+34ML._SY300_SX300_.jpg",
           ],
           ProductLinks: [
             {
@@ -1485,7 +1485,7 @@ const mockData = {
             },
             {
               ProductID: 35,
-              WebsiteName: "Amazon India",
+              WebsiteName: "Amazon",
               WebsiteURL: "https://www.amazon.in/Corsair-K95-RGB-Platinum-XT/dp/B0U123456",
               Price: "21999.00",
               Rating: "4.4",

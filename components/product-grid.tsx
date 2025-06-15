@@ -1,17 +1,28 @@
-import Link from "next/link"
-import Image from "next/image"
-import type { Product } from "@/lib/types"
+'use client'
+
+import Link from 'next/link'
+import Image from 'next/image'
+import type { Product } from '@/lib/types'
 
 interface ProductGridProps {
   products: Product[]
 }
 
+// Format INR safely
+function formatINR(price: number): string {
+  return `₹${price.toLocaleString('en-IN', {
+    maximumFractionDigits: 0,
+  })}`
+}
+
 export function ProductGrid({ products }: ProductGridProps) {
-  if (products.length === 0) {
+  if (!products || products.length === 0) {
     return (
       <div className="text-center py-12">
         <h3 className="text-lg font-medium">No products found</h3>
-        <p className="text-gray-500 mt-2">Try adjusting your search or filter criteria</p>
+        <p className="text-gray-500 dark:text-zinc-400 mt-2">
+          Try adjusting your search or filter criteria
+        </p>
       </div>
     )
   }
@@ -19,36 +30,30 @@ export function ProductGrid({ products }: ProductGridProps) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {products.map((product) => {
-        // Calculate rating and review count from reviews array
-        const reviewCount = product.reviews?.length ?? 0;
-        const averageRating =
-          reviewCount > 0
-            ? product.reviews.reduce((sum, r) => sum + (r.rating ?? 0), 0) / reviewCount
-            : 0;
-
-        // Use the first image if available, otherwise fallback
-        const imageSrc = product.Images && product.Images.length > 0 ? product.Images[0] : "/placeholder.svg";
-
-        // Use the first ProductLink for price/discount, fallback to 0 if not available
-        const firstLink = product.ProductLinks && product.ProductLinks.length > 0 ? product.ProductLinks[0] : null;
-        const price = firstLink?.Price ? parseFloat(firstLink.Price) : 0;
-        // If ProductLink does not have a discount property, set discount to 0
-        const discount = 0;
+        const imageUrl = product.image || '/placeholder.svg'
+        const rating = Math.floor(Number(product.rating) || 0)
+        const reviewCount = Number(product.reviewCount) || 0
+        const price = Number(product.price) || 0
+        const discount = Number(product.discount) || 0
+        const hasDiscount = discount > 0
+        const finalPrice = Math.round(price * (1 - discount / 100))
 
         return (
           <Link
-            key={product.Id}
-            href={`/products/${product.Id}`}
-            className="group bg-white dark:bg-zinc-950 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow"
+            key={product.id}
+            href={`/products/${product.id}`}
+            className="group bg-white dark:bg-zinc-900 rounded-lg shadow-sm dark:shadow-none dark:border dark:border-zinc-800 overflow-hidden hover:shadow-md dark:hover:border-zinc-700 transition-all"
           >
-            <div className="relative aspect-square bg-gray-100 dark:bg-gray-900">
+            <div className="relative aspect-square bg-gray-100 dark:bg-black">
               <Image
-                src={imageSrc}
-                alt={product.Name}
+                src={imageUrl}
+                alt={product.name}
                 fill
+                priority
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
               />
-              {discount > 0 && (
+              {hasDiscount && (
                 <div className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
                   {discount}% OFF
                 </div>
@@ -56,10 +61,12 @@ export function ProductGrid({ products }: ProductGridProps) {
             </div>
 
             <div className="p-4">
-              <h3 className="font-medium text-lg mb-1 line-clamp-2 group-hover:text-primary dark:group-hover:text-primary transition-colors">
-                {product.Name}
+              <h3 className="font-medium text-lg mb-1 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                {product.name}
               </h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm mb-2 line-clamp-2">{product.Description}</p>
+              <p className="text-gray-500 dark:text-zinc-400 text-sm mb-2 line-clamp-2">
+                {product.description}
+              </p>
 
               <div className="flex items-center mb-2">
                 <div className="flex items-center">
@@ -68,7 +75,10 @@ export function ProductGrid({ products }: ProductGridProps) {
                     .map((_, i) => (
                       <svg
                         key={i}
-                        className={`w-4 h-4 ${i < Math.floor(averageRating) ? "text-yellow-400" : "text-gray-300"}`}
+                        className={`w-4 h-4 ${i < rating
+                            ? 'text-yellow-400'
+                            : 'text-gray-300 dark:text-zinc-700'
+                          }`}
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -76,30 +86,33 @@ export function ProductGrid({ products }: ProductGridProps) {
                       </svg>
                     ))}
                 </div>
-                <span className="text-xs text-gray-500 dark:text-gray-400 ml-1">({reviewCount})</span>
+                <span className="text-xs text-gray-500 dark:text-zinc-500 ml-1">
+                  ({reviewCount})
+                </span>
               </div>
 
               <div className="flex items-center justify-between">
                 <div>
-                  {discount > 0 ? (
+                  {hasDiscount ? (
                     <div className="flex items-center gap-2">
                       <span className="font-bold text-lg">
-                        ${(price * (1 - discount / 100)).toFixed(2)}
+                        {formatINR(finalPrice)}
                       </span>
-                      <span className="text-gray-500 line-through text-sm">${price.toFixed(2)}</span>
+                      <span className="text-gray-500 dark:text-zinc-500 line-through text-sm">
+                        {formatINR(price)}
+                      </span>
                     </div>
                   ) : (
-                    <span className="font-bold text-lg">${price.toFixed(2)}</span>
+                    <span className="font-bold text-lg">
+                      {formatINR(price)}
+                    </span>
                   )}
                 </div>
-
-                <div className="text-xs text-gray-500 dark:text-gray-400">{product.ProductLinks?.length ?? 0} sellers</div>
               </div>
             </div>
           </Link>
-        );
+        )
       })}
     </div>
   )
 }
-

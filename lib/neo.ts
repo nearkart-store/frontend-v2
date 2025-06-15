@@ -2,6 +2,7 @@
 // yarn add @google/generative-ai
 
 
+
 interface ChatMessageContent {
   type: string;
   text: string;
@@ -24,8 +25,8 @@ interface ChatResponse {
 }
 
 async function runChat(prompt: string): Promise<ChatResponse> {
-  const API_KEY = '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';
-  // const API_KEY = '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';
+  // const API_KEY = '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';
+  const API_KEY = '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';
   const MODEL_NAME = 'deepseek/deepseek-r1-0528:free';
 
 
