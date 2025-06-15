@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Context } from "@/context/ContextProvider";
 
-const AuroraBody = () => {
+const NeoBody = () => {
   const {
     submit,
     recentPrompts,
@@ -28,14 +28,19 @@ const AuroraBody = () => {
     e.preventDefault();
     if (!isInputEmpty) await submit();
   };
-
+  console.log(input)
+  console.log(recentPrompts)
+  console.log(displayResult)
+  console.log(result)
   // Auto-scroll to bottom on new result
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [result]);
 
+
+
   return (
-    <div className="h-full flex flex-col">
+    <div className="h-full flex flex-col bg-black">
       {/* Chat Display Area */}
       <div className="flex-1 overflow-y-auto px-5 py-4 space-y-4 hide-scrollbar">
         {!displayResult ? (
@@ -52,7 +57,7 @@ const AuroraBody = () => {
 
             {/* Neo's Response */}
             <div className="self-start bg-[#c54042] text-white rounded-2xl p-4 w-full max-w-[100%]">
-              <p className="text-xs text-gray-200 mb-1">Neo</p>
+              <p className="text-xs text-gray-200 mb-1">Neo AI</p>
               {loading ? (
                 <p className="italic animate-pulse">Neo is thinking...</p>
               ) : (
@@ -102,7 +107,7 @@ const AuroraBody = () => {
       </div>
 
       {/* Input Box */}
-      <div className="w-full max-w-[900px] m-auto px-3 py-3 bg-neutral-900 border-t border-zinc-800">
+      <div className="w-full max-w-[900px] m-auto px-3 py-3 bg-black/70 border-t border-zinc-800">
         <form onSubmit={handleSubmit}>
           <div className="flex items-center justify-between gap-3 border border-zinc-700 px-4 py-3 rounded-lg">
             <input
@@ -130,4 +135,4 @@ const AuroraBody = () => {
   );
 };
 
-export default AuroraBody;
+export default NeoBody;

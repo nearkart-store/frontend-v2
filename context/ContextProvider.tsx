@@ -1,5 +1,5 @@
 "use client";
-import runChat from "@/lib/aurora";
+import runChat from "@/lib/neo";
 import React, { createContext, useState } from "react";
 
 type ContextType = {

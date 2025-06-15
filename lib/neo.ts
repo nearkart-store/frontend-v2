@@ -24,8 +24,10 @@ interface ChatResponse {
 }
 
 async function runChat(prompt: string): Promise<ChatResponse> {
-  const API_KEY = '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';
+  const API_KEY = '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';
+  // const API_KEY = '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';
   const MODEL_NAME = 'deepseek/deepseek-r1-0528:free';
+
 
   try {
     const body: ChatRequestBody = {
@@ -56,7 +58,9 @@ async function runChat(prompt: string): Promise<ChatResponse> {
       body: JSON.stringify(body),
     });
 
+
     return response.json() as Promise<ChatResponse>;
+    
 
   }
   catch (error) {
@@ -64,5 +68,6 @@ async function runChat(prompt: string): Promise<ChatResponse> {
     throw error;
   }
 }
+
 
 export default runChat;

@@ -1,4 +1,50 @@
+export interface Category {
+  Id: number
+  Name: string
+  Products: Product[]
+}
+
 export interface Product {
+  Id: number
+  Name: string
+  Description: string
+  specifications: Record<string, any>
+  Images: string[]
+  ProductLinks: ProductLink[]
+  reviews: Review[]
+}
+
+export interface ProductLink {
+  ProductID: number
+  WebsiteName: string
+  WebsiteURL: string
+  Price: string
+  Rating?: string
+}
+
+export interface Review {
+  id: string
+  userName: string
+  userAvatar?: string
+  rating: number
+  title: string
+  content: string
+  date: string
+  helpfulCount: number
+  images?: string[]
+}
+
+export interface FilterOptions {
+  query?: string
+  category?: string
+  minPrice?: number
+  maxPrice?: number
+  brands?: string[]
+  sort?: string
+}
+
+// Transformed types for frontend compatibility
+export interface TransformedProduct {
   id: string
   name: string
   description: string
@@ -23,25 +69,3 @@ export interface PriceInfo {
   delivery: string
   url: string
 }
-
-export interface Review {
-  id: string
-  userName: string
-  userAvatar?: string
-  rating: number
-  title: string
-  content: string
-  date: string
-  helpfulCount: number
-  images?: string[]
-}
-
-export interface FilterOptions {
-  query?: string
-  category?: string
-  minPrice?: number
-  maxPrice?: number
-  brands?: string[]
-  sort?: string
-}
-
